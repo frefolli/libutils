@@ -3,7 +3,7 @@ project('libutils', 'cpp', version: 'master')
 include = include_directories('include')
 
 libutils = library('libutils', [
-    'src/utils/strings.cc'
+    'src/libutils/strings.cc'
   ], include_directories: include)
 
 main = executable('main.exe', [

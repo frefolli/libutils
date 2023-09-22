@@ -6,7 +6,7 @@ libutils = library('libutils', [
     'src/utils/strings.cc'
   ], include_directories: include)
 
-ain = executable('main.exe', [
+main = executable('main.exe', [
     'src/main.cc',
   ], include_directories : include,
   link_with: libutils)

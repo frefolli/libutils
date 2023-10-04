@@ -1,4 +1,5 @@
 #include <libutils/strings.hh>
+#include <libutils/vectors.hh>
 #include <iostream>
 
 std::string to_string(bool value) {
@@ -15,4 +16,6 @@ int main(int argc, char**args) {
     std::cout << "-ll       = " << to_string(isFlagShortName("-ll")) << std::endl;
     std::cout << "some name = " << encodeFlagLongName("some name") << std::endl;
     std::cout << "someName  = " << encodeFlagLongName("someName") << std::endl;
+    std::vector<std::string> magic_vector = {"ok", "john"};
+    std::cout << magic_vector << std::endl;
 }

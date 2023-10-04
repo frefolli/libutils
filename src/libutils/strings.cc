@@ -43,3 +43,22 @@ std::string encodeFlagLongName(std::string longName) {
     }
     return longName;
 }
+
+std::vector<std::string> tokenizeString(std::string text, const char* delim) {
+    std::vector<std::string> tokens = {};
+    std::string buffer = "";
+    for (auto cIt = text.begin(); cIt != text.end(); ++cIt) {
+        if (strchr(delim, *cIt) != NULL) {
+            if (buffer.size() > 0) {
+                tokens.push_back(buffer);
+                buffer = "";
+            }
+        } else {
+            buffer += *cIt;
+        }
+    }
+    if (buffer.size() > 0) {
+        tokens.push_back(buffer);
+    }
+    return tokens;
+}

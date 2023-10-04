@@ -16,6 +16,7 @@ int main(int argc, char**args) {
     std::cout << "-ll       = " << to_string(isFlagShortName("-ll")) << std::endl;
     std::cout << "some name = " << encodeFlagLongName("some name") << std::endl;
     std::cout << "someName  = " << encodeFlagLongName("someName") << std::endl;
-    std::vector<std::string> magic_vector = {"ok", "john"};
+    std::string magic_string = "a,b,c";
+    std::vector<std::string> magic_vector = tokenizeString(magic_string, ",");
     std::cout << magic_vector << std::endl;
 }

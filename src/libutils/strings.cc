@@ -1,5 +1,6 @@
 #include <libutils/strings.hh>
 #include <regex>
+#include <cstring>
 #define TAB "    "
 
 std::string indentString(std::string text) {

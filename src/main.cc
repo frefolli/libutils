@@ -2,6 +2,7 @@
 #include <libutils/vectors.hh>
 #include <libutils/sets.hh>
 #include <libutils/deques.hh>
+#include <libutils/maps.hh>
 #include <iostream>
 
 std::string to_string(bool value) {
@@ -32,4 +33,6 @@ int main(int argc, char**args) {
     std::cout << C << std::endl;
     std::cout << vector_index(magic_vector, std::string("b")) << std::endl;
     std::cout << deque_index(magic_deque, 3) << std::endl;
+    std::map<std::string, std::string> magic_map ({{"x", "4"}});
+    std::cout << map_in(magic_map, std::string("x")) << std::endl;
 }

@@ -33,6 +33,15 @@ std::set<T> set_diff(std::set<T>& a, std::set<T> b) {
 }
 
 template<typename T>
+bool set_join(std::set<T>& a, T obj) {
+    if (! set_in(a, obj)) {
+        a.insert(obj);
+        return true;
+    }
+    return false;
+}
+
+template<typename T>
 std::ostream& operator<<(std::ostream& out, std::set<T>& objects) {
     for (auto it = objects.begin(); it != objects.end(); ++it) {
         if (it != objects.begin())

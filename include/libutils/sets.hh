@@ -2,6 +2,7 @@
 #define LIBUTILS_SETS_HH
 #include <set>
 #include <algorithm>
+#include <ostream>
 
 template<typename T>
 bool set_in(std::set<T>& a, T obj) {

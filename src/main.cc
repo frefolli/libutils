@@ -1,5 +1,6 @@
 #include <libutils/strings.hh>
 #include <libutils/vectors.hh>
+#include <libutils/sets.hh>
 #include <iostream>
 
 std::string to_string(bool value) {
@@ -18,5 +19,9 @@ int main(int argc, char**args) {
     std::cout << "someName  = " << encodeFlagLongName("someName") << std::endl;
     std::string magic_string = "a,b,c";
     std::vector<std::string> magic_vector = tokenizeString(magic_string, ",");
+    std::set<int> A = {0, 1, 2};
+    std::set<int> B = {2};
+    std::set<int> C = set_diff(A, B);
     std::cout << magic_vector << std::endl;
+    std::cout << C << std::endl;
 }
